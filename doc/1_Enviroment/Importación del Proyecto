@@ -1,0 +1,111 @@
+Cuando queremos arrancar un poryecto en Windows pero iniciamos el proyecto en Linux, hay ciertos aspectos a consoiderar.
+
+
+Para crear nuestro proyecto En Linux realizamos
+
+composer create-project --prefer-dist yiisoft/yii2-app-basic yiiblioteca
+
+Accesamos a la carpeta del proyecto
+cd yiibliotecla
+creamos nuestra carpeta de documentación
+mkdir doc
+
+Creamos nuestro README
+
+subl README.md
+
+guardamos e inicializamos el repositorio local
+
+git init
+
+Agregamos al stage area 
+
+git add .
+
+Commit
+
+git commit -m "Iniciando.."
+
+Establecemos la rama
+git branch -M main
+
+git remote add origin git@github.com:Klvst3r/yiiblioteca.git
+
+git branch -M main
+
+
+Subimos al repositorio
+git push -u origin main
+
+
+
+
+
+Se crea nuestroi proyecto y lo siubimos a nuestro repositorio
+
+
+
+
+el primero es que debemos de Arrancar el repositorio y asociarlo con nuestro sistema operativo, en este caso Windows como host final
+
+…or create a new repository on the command line
+
+echo "# yiiblioteca" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:Klvst3r/yiiblioteca.git
+git push -u origin main
+
+…or push an existing repository from the command line
+
+git remote add origin git@github.com:Klvst3r/yiiblioteca.git
+git branch -M main
+git push -u origin main
+
+
+Al ya tener el sistema en windows
+
+Accesamos a la carpeta destino
+
+cd yiibiblioteca\
+
+Y clonamos el proyecto
+git clone git@github.com:Klvst3r/yiiblioteca.git
+
+Si no tenemos composer instalamos
+composer install
+
+Actualizamos composer si nos indica que ya se encuentra instalado
+composer update
+
+
+Generamos archivos autoload
+composer dump-autoload
+
+Verificamos en el navegador
+http://localhost/dev/yiiblioteca/web/
+
+Con ello podremos ya continuar en Windows, actualizar y retomar en Linux
+
+
+Referencias:
+
+https://stackoverflow.com/questions/41209349/requirevendor-autoload-php-failed-to-open-stream
+
+https://git-scm.com/book/es/v2/Git-en-el-Servidor-Generando-tu-clave-p%C3%BAblica-SSH
+
+https://www.yiiframework.com/doc/guide/1.1/es/topics.console
+
+https://qbit.com.mx/blog/?p=2126
+
+https://es.scribd.com/document/207684902/InstalacionyConfiguracion-Yii
+
+
+
+Guia definitiva de Yii
+https://www.yiiframework.com/doc/guide/2.0/es/start-installation
+
+
+
